@@ -11,6 +11,12 @@ const argv = require("yargs")
                 type: 'boolean', 
                 default: false,
                 describe: "Es la opción para imprimir la lista"
+            },
+            'h':{
+                alias: 'hasta',
+                type: 'number', 
+                default: 10,
+                describe: "Es el n de la sumatoria"
             }
 
         })
