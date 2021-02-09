@@ -1,5 +1,8 @@
 const { sumatoria } = require("./helpers/sumar");
-const B = 3;
-sumatoria(B)
-    .then(respuesta => console.log(respuesta))
-    .catch(err => console.log(err));
+const argv = require("./config/yargs");
+
+console.clear(); 
+ 
+sumatoria(argv.b, argv.l)
+    .then(resp => console.log(resp))
+    .catch(er => console.log(er));
