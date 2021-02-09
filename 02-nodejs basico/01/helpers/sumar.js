@@ -1,4 +1,5 @@
-var fs = require("fs");
+const fs = require("fs");
+const colors = require("colors");
 const sumatoria = async (base = 1, listar) => {
     try {
         let salida = "";
@@ -6,7 +7,7 @@ const sumatoria = async (base = 1, listar) => {
             salida += `${base} + ${i} = ${base + i}\n`;
         }
         if(listar){
-            console.log(salida);
+            console.log(salida.blue);
         }
         fs.writeFileSync(`texto${base}.txt`, salida);
         return `se ha imprimido la sumatoria`;
