@@ -3,13 +3,14 @@ const argv = require("yargs")
             'b':{
                 alias: 'base',
                 type: 'number',
-                demandOption: true   
+                demandOption: true,
+                describe: "Es la base de la sumatoria"  
             },
             'l':{
                 alias: 'listar',
-                type: 'boolean',
-                demandOption: true,
-                default: false
+                type: 'boolean', 
+                default: false,
+                describe: "Es la opción para imprimir la lista"
             }
 
         })
