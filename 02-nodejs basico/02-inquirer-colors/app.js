@@ -1,11 +1,14 @@
 require("colors");
-const {mostrarMenu, pausa} = require("./helpers/mensajes")
+const {inquirerMenu, pausar} = require("./helpers/inquirer");
+const Tareas = require("./models/tareas")
 const main = async() =>{
     let apt= '';
+    const tareas =  new Tareas();
+    
     do {
-        apt = await mostrarMenu();
-        console.log({apt})
-        if(apt==='0')await pausa();
+        apt = await inquirerMenu();
+        console.log({apt});
+        await pausar();
     } while (apt !== '0');
 }
 
