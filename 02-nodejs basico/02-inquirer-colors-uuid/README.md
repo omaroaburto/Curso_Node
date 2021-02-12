@@ -1,4 +1,4 @@
-#Aplicación: Tareas diarias
+# Aplicación: Tareas diarias
 ****************************
 Es una aplicación que se ejecuta mediante la terminal con los paquetes colors, uuid, rf e inquirer-
 
