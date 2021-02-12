@@ -5,4 +5,5 @@ Contiene el paquete de colors para mejorar los mensajes entregados a traves de l
 
 npm i yargs
 
-npm i colors
+`npm i colors`
+
