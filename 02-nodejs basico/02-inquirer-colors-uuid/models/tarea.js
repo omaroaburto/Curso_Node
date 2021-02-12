@@ -1,14 +1,14 @@
-const {v4: uuidv4} = equire("uuid");
+const {v4: uuidv4} = require("uuid");
 
 class tarea{
     id =  "";
     descripcion = "";
-    completado = null;
+    completado = false;
     
     constructor(descripcion){ 
-        this.uuidv4();
+        this.id= uuidv4();
         this.descripcion = descripcion;
-        this.completado = null; 
+        this.completado = false; 
     }
 }
 

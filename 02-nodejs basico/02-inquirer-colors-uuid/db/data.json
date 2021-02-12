@@ -1,0 +1,21 @@
+[{
+    "id": "4a1aee73-1e13-4970-8259-a6dc73049697",
+    "descripcion": "comprar pan",
+    "completado": null,
+    "completada": "2021-02-12T01:34:33.009Z"
+}, {
+    "id": "43ee1f8b-706d-49d0-b556-69e62212c783",
+    "descripcion": "vender pan",
+    "completado": null,
+    "completada": "2021-02-12T01:34:33.009Z"
+}, {
+    "id": "a495ff77-00c3-4665-8a1f-c421b832d016",
+    "descripcion": "comer pan",
+    "completado": true,
+    "completada": "2021-02-12T01:34:33.009Z"
+}, {
+    "id": "5b087559-f89e-4650-b471-123f7610a8f4",
+    "descripcion": "regalar pan",
+    "completado": null,
+    "completada": "2021-02-12T01:34:33.009Z"
+}]
