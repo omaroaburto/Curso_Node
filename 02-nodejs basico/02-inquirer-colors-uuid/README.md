@@ -1,9 +1,9 @@
 #Aplicación: Tareas diarias
 ****************************
 Es una aplicación que se ejecuta mediante la terminal con los paquetes colors, uuid, rf e inquirer 
-npm i colors 
+`npm i colors 
 npm i uuid
-npm i inquirer
+npm i inquirer`
 
 Esta aplicación  permite realizar las siguientes acciones:
 -Crear Tareas 
