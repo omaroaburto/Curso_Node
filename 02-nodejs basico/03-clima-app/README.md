@@ -6,9 +6,9 @@
 
 - Historial de búsqueda.
 
-- Se trabaja con la API de MapBox para obtener información de los lugares (id, nombre, latitud y longitud).
+- Se trabaja con la API de <b>MapBox</b> para obtener información de los lugares (id, nombre, latitud y longitud).
 
-- Se utiliza la API de OpenWeatherMap para obtener la información del clima de los lugares seleccionados con la API de MapBox.
+- Se utiliza la API de <b>OpenWeatherMap</b> para obtener la información del clima de los lugares seleccionados con la API de MapBox.
 
 `npm i colors`
 
