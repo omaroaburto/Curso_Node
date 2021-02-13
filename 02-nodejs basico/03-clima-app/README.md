@@ -17,3 +17,7 @@
 `npm i axios`
 
 `npm i dotenv`
+
+![Imagen 1](https://i.imgur.com/RaDXNmH.png)
+![Imagen 2](https://i.imgur.com/lktSu5B.png)
+![Imagen 3](https://i.imgur.com/aDjJMEU.png)
