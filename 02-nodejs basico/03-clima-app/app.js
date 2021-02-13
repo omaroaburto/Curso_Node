@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('colors');
 const { 
     inquirerMenu, 
     pausar, 
@@ -20,21 +21,30 @@ const main = async ()=>{
                 const lugares = await busqueda.ciudad(terminoBusqueda);
                 //seleccionar el lugar
                 const idSeleccionado = await listarLugares(lugares);
+                if(idSeleccionado==='0') continue;
                 const lugarSeleccionado = lugares.find(l => l.id === idSeleccionado);
-      
+                //guardar búsqueda en db
+                busqueda.agregarHistorial(lugarSeleccionado.nombre);
+                //obtener clima de lugar seleccionado
+                const clima = await busqueda.climaLugar(lugarSeleccionado.lat, lugarSeleccionado.lng);
+     
                 //desplegar información de lugar seleccionado
                 console.log("\nInformación de la ciudad");
                 console.log('Ciudad : ', lugarSeleccionado.nombre);
                 console.log('Lat :', lugarSeleccionado.lng);
                 console.log('Lng : ', lugarSeleccionado.lat);
-                console.log('Temperatura : ',);
-                console.log('Mínima : ',);
-                console.log('Máxima : ',);
+                console.log('Temperatura : ',clima.temperatura );
+                console.log('Mínima : ',clima.minima);
+                console.log('Máxima : ', clima.maxima);
+                console.log('clima: ', clima.desc);
                 console.log('\n');
                 break;
         
             case 2:
-                console.log({opt});
+                busqueda.historialCapitalizado.forEach((lugar, index) =>{
+                    const idx = `${index+1}).`.green;
+                    console.log(`${idx} ${lugar}.`)
+                })
                 break;
         }
         await pausar();
