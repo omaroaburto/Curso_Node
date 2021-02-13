@@ -6,8 +6,12 @@
 
 - Historial de búsqueda
 
+- Se trabaja con la API de MapBox para obtener información de los lugares (id, nombre, latitud y longitud)
+
 `npm i colors`
 
 `npm i inquirer`
 
 `npm i axios`
+
+`npm i dotenv`
