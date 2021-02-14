@@ -9,14 +9,14 @@ const {
 
 const router = Router();
 
-router.app.get('/', getUsuarios);
+router.get('/', getUsuarios);
 
-router.app.post('/', postUsuarios);
+router.post('/', postUsuarios);
 
-router.app.put('/:id', putUsuarios);
+router.put('/:id', putUsuarios);
 
-router.app.delete('/', deleteUsuarios);
+router.delete('/', deleteUsuarios);
 
-router.app.delete('/', patchUsuarios);
+router.patch('/', patchUsuarios);
 
 module.exports = router;
