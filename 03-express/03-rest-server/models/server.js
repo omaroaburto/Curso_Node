@@ -1,4 +1,6 @@
 const express =  require("express");
+const cors = require("cors");
+
 class Server{
     constructor(){
         this.app =  express();
@@ -10,16 +12,20 @@ class Server{
     }
 
     middlewares(){
+        //cors
+        this.app.use(cors());
+        //Lectura y parseo del body
+        this.app.use(express.json());
         //directorio público
         this.app.use(express.static('public'));
     }
 
     //método de controla las rutas
     routes(){
-        this.app.get('/api', (req, res)=>{
-            res.send("Inicio");
-        });
+
+        this.app.use('/api/usuarios', require('../routes/usuarios'));
     }
+
     listen(){
         this.app.listen(this.port,()=>{
             console.log("La aplicación está corriendo por el puerto ",this.port);
