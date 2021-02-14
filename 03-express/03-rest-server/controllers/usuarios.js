@@ -4,8 +4,12 @@ const {
 } = require("express");
 
 const getUsuarios = (req = request, res = response)=>{
+    const {q, nombre, apiKey} =  req.query;
     res.json({
-        msg:"api get"
+        msg:"api get",
+        q,
+        nombre,
+        apiKey
     });
 }
 
@@ -19,6 +23,7 @@ const postUsuarios = (req = request, res = response)=>{
 }
 
 const putUsuarios = (req = request, res = response)=>{
+    const id = req.params;
     res.json({
         msg:"api put"
     });
