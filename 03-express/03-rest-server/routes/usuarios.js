@@ -8,7 +8,7 @@ const {
 } = require("../controllers/usuarios");
 
 const router = Router();
-
+//rutas
 router.get('/', getUsuarios);
 
 router.post('/', postUsuarios);
