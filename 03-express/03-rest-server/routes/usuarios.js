@@ -9,7 +9,8 @@ const {
 } = require("../controllers/usuarios");
 const { 
     isRoleValidate, 
-    existEmail 
+    existEmail, 
+    existId
 } = require("../helpers/db-validators");
 const { validateUser } = require("../middlewares/validate");
 
@@ -23,13 +24,22 @@ router.post('/',[
     check('email', 'El correo es obligatorio').isEmail(),
     check('email').custom(existEmail),
     //check('role','No es un rol válido').isIn(['ADMIN_ROLE', 'USER_ROLE']),
-    check('role').custom(isRoleValidate ),
+    check('role').custom(isRoleValidate),
     validateUser
 ],postUsuarios);
 
-router.put('/:id', putUsuarios);
+router.put('/:id',[
+    check('id', 'No es un ID válido').isMongoId(),
+    check('id').custom(existId),
+    check('role').custom(isRoleValidate),
+    validateUser
+], putUsuarios);
 
-router.delete('/', deleteUsuarios);
+router.delete('/:id',[
+    check('id', 'No es un ID válido').isMongoId(),
+    check('id').custom(existId),
+    validateUser
+], deleteUsuarios);
 
 router.patch('/', patchUsuarios);
 
