@@ -6,6 +6,11 @@ class Server{
     constructor(){
         this.app =  express();
         this.port = process.env.PORT;
+
+        //path rutas
+        this.authPath = '/api/auth';
+        this.userPath = '/api/usuario';
+        
         //Middlewares
         this.middlewares();
         //rutas
@@ -25,8 +30,9 @@ class Server{
 
     //método de controla las rutas
     routes(){
-
-        this.app.use('/api/usuarios', require('../routes/usuarios'));
+        this.app.use(this.authPath, require('../routes/auth'));
+        this.app.use(this.userPath, require('../routes/usuarios'));
+      
     }
 
     listen(){
